@@ -1,0 +1,13 @@
+.homeContainer {
+  display: flex;
+  background: linear-gradient(to top, #00e1ff 0%, #00246d 100%);
+  color: wheat;
+  height: calc(100vh - 70px);
+  .left {
+    flex: 4;
+    border-right: 2px solid #00246d;
+  }
+  .right {
+    flex: 2;
+  }
+}

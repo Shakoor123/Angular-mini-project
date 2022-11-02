@@ -1,0 +1,36 @@
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #00246d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px dotted #6acfdd;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-left: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      color: #6acfdd;
+      cursor: pointer;
+      letter-spacing: 2px;
+    }
+  }
+  .logOut {
+    margin-right: 30px;
+    width: 160px;
+    height: 35px;
+    background-color: #00e1ff;
+    color: #00246d;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px 0 0 30px;
+  }
+}
+
+// , #00e1ff 0%, #00246d 100%);
