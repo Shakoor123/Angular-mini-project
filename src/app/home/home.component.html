@@ -1,5 +1,35 @@
 <app-header></app-header>
 <div class="homeContainer">
-  <div class="left">l</div>
+  <div class="left">
+    <div class="combo">
+      <div class="title">&nbsp;&nbsp;&nbsp;<span>TRENDING MOVIES</span></div>
+      <div class="movieList">
+        <div class="movie" *ngFor="let m of movies">
+          <img src="{{ path }}{{ m.poster_path }}" alt="" class="movieImage" />
+
+          <div class="movieTitle">{{ m.original_title }}</div>
+          <div class="rating">Raitting : {{ m.vote_average }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="combo">
+      <div class="title">
+        &nbsp;&nbsp;&nbsp;<span>TRENDING MOVIES</span>
+        <span class="more">View all</span>
+      </div>
+      <div class="movieList">
+        <div class="movie">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENLNAB5MwFTC9IcnJyD35tKrmqCNeRZ3Y3A&usqp=CAU"
+            alt=""
+            class="movieImage"
+          />
+
+          <div class="movieTitle">black adam</div>
+          <div class="rating">Raitting: 4.2</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="right">r</div>
 </div>
