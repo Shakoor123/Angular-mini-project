@@ -40,8 +40,9 @@
         .movie {
           width: 251px;
           border-bottom: 1px solid #00246d;
-          height: 190px;
-
+          height: 230px;
+          margin-right: 5px;
+          cursor: pointer;
           position: relative;
           .movieImage {
             width: 250px;
@@ -60,6 +61,8 @@
             text-align: right;
             font-weight: 700;
             letter-spacing: 1px;
+            width: 100%;
+            text-overflow: unset;
           }
           .rating {
             color: #00246d;
@@ -72,5 +75,43 @@
   }
   .right {
     flex: 2;
+    background-color: #00000088;
+    .rightContainer {
+      padding: 20px;
+      .title {
+        margin-bottom: 20px;
+        border-left: 8px solid #00e1ff;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        // -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 0.5px;
+        color: white;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-color: rgb(161, 14, 14);
+      }
+      .rightMovies {
+        width: 100%;
+        .listItem {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 15px;
+          border-bottom: 2px solid yellow;
+          cursor: pointer;
+          .name {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 400;
+            -webkit-text-stroke-width: 0.5px;
+            color: white;
+            -webkit-text-fill-color: #6e6161;
+          }
+          .raitings {
+            font-size: 16px;
+            color: yellow;
+          }
+        }
+      }
+    }
   }
 }

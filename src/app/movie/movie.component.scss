@@ -1,0 +1,22 @@
+.data {
+  height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .image {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .title {
+    font-weight: bold;
+    color: rgb(14, 27, 27);
+  }
+  .details {
+    color: rgb(48, 68, 61);
+    font-size: 18px;
+  }
+}

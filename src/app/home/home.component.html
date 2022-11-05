@@ -4,7 +4,7 @@
     <div class="combo">
       <div class="title">&nbsp;&nbsp;&nbsp;<span>TRENDING MOVIES</span></div>
       <div class="movieList">
-        <div class="movie" *ngFor="let m of movies">
+        <div class="movie" *ngFor="let m of movies1" (click)="gotoMovie(m.id)">
           <img src="{{ path }}{{ m.poster_path }}" alt="" class="movieImage" />
 
           <div class="movieTitle">{{ m.original_title }}</div>
@@ -18,18 +18,28 @@
         <span class="more">View all</span>
       </div>
       <div class="movieList">
-        <div class="movie">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENLNAB5MwFTC9IcnJyD35tKrmqCNeRZ3Y3A&usqp=CAU"
-            alt=""
-            class="movieImage"
-          />
+        <div class="movie" *ngFor="let m of movies2" (click)="gotoMovie(m.id)">
+          <img src="{{ path }}{{ m.poster_path }}" alt="" class="movieImage" />
 
-          <div class="movieTitle">black adam</div>
-          <div class="rating">Raitting: 4.2</div>
+          <div class="movieTitle" maxlength="10">{{ m.original_title }}</div>
+          <div class="rating">Raitting : {{ m.vote_average }}</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="right">r</div>
+  <div class="right">
+    <div class="rightContainer">
+      <div class="title">&nbsp;&nbsp; ALL TIME POPULAR</div>
+      <div class="rightMovies">
+        <div
+          class="listItem"
+          *ngFor="let m of movies3"
+          (click)="gotoMovie(m.id)"
+        >
+          <div class="name">{{ m.original_title }}</div>
+          <div class="raitings">Raitting : {{ m.vote_average }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
