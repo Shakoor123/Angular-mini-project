@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
         this.movies1 = this.movies.slice(0, 4);
         this.movies2 = this.movies.slice(4, 8);
         this.movies3 = this.movies.slice(8, 20);
-        console.log(this.movies1);
       });
   }
   gotoMovie(id: number) {

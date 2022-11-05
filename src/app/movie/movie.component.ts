@@ -10,7 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieComponent implements OnInit {
   id = '';
   movies: any;
-  currentMovies: any;
+  currentMovie: any;
+  path: string = 'https://image.tmdb.org/t/p/original';
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
@@ -22,6 +23,12 @@ export class MovieComponent implements OnInit {
       )
       .subscribe((data) => {
         this.movies = data.results;
+        // this.currentMovie = this.movies.find((x: any) => x.id === this.id);
+        for (var i = 0, len = this.movies.length; i < len; i++) {
+          if (this.movies[i].id == this.id) {
+            this.currentMovie = this.movies[i];
+          }
+        }
       });
   }
 }

@@ -4,19 +4,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background: linear-gradient(to top, #00e1ff 0%, #00246d 100%);
+
   .image {
-    width: 600px;
-    height: auto;
+    width: 400px;
+    height: 600px;
     object-fit: cover;
     border-radius: 20px;
   }
-  .title {
-    font-weight: bold;
-    color: rgb(14, 27, 27);
-  }
+
   .details {
     color: rgb(48, 68, 61);
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 600px;
+    height: 600px;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    .title {
+      font-weight: bold;
+      color: rgb(14, 27, 27);
+    }
   }
 }
